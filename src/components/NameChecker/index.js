@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import checkNumericValueOfWord from '../../helpers/checkNumericValueOfWord';
 import './index.css';
 
-class NameChacker extends Component {
+class NameChecker extends Component {
 
   state = {
     name: ''
@@ -16,10 +16,13 @@ class NameChacker extends Component {
 
   render() {
     return (
-      <div className="NameChacker">
-        <form className="container NameChacker__form">
+      <div className="NameChecker">
+        <h1 className="NameChecker__headline">
+          Numerological word checker
+        </h1>
+        <form className="container NameChecker__form">
           <input
-            className="form-control NameChacker__form__input"
+            className="form-control NameChecker__form__input"
             name="input"
             type="text"
             value={this.state.name}
@@ -27,7 +30,7 @@ class NameChacker extends Component {
             placeholder="Name to calculate"
           />
         </form>
-        <div className="NameChacker__number">
+        <div className="NameChecker__number">
           {checkNumericValueOfWord(this.state.name)}
         </div>
       </div>
@@ -35,4 +38,4 @@ class NameChacker extends Component {
   }
 }
 
-export default NameChacker;
+export default NameChecker;

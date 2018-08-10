@@ -1,0 +1,20 @@
+.NameChecker {
+  padding: 20px;
+}
+
+.NameChecker__headline {
+  margin-bottom: 20px;
+}
+
+.NameChecker__form {
+  margin-bottom: 20px;
+}
+
+.NameChecker__form__input {
+
+}
+
+.NameChecker__number {
+  font-size: 24px;
+  font-weight: 700;
+}

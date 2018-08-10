@@ -1,0 +1,29 @@
+.WordGenerator {
+  padding: 20px;
+}
+
+.WordGenerator__headline {
+  margin-bottom: 20px;
+}
+
+.WordGenerator__btns {
+  margin-bottom: 20px;
+}
+
+.WordGenerator__btns__btn {
+  
+}
+
+.WordGenerator__word {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.WordGenerator__generate {
+  margin-bottom: 20px;
+}
+
+.WordGenerator__generate__btn {
+  
+}

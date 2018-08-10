@@ -28,7 +28,7 @@ const randomSoft = () => soft[randomNumberFromRange(0, soft.length - 1)];
 const randomHard = () => hard[randomNumberFromRange(0, hard.length - 1)];
 
 const generate = () => {
-  const length = randomNumberFromRange(4, 9);
+  const length = randomNumberFromRange(4, 6);
 
   let word = '';
   let softCount = 0;
