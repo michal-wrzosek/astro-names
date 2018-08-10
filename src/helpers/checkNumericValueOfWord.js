@@ -27,9 +27,23 @@ const letterNumbers = {
   "z": 8
 }
 
+const letterTransformations = {
+  "ą": "a",
+  "ć": "c",
+  "ę": "e",
+  "ó": "o",
+  "ś": "s",
+  "ź": "z",
+  "ż": "z"
+}
+
 const checkNumericValueOfWord = (name) => {
   let number = name
+    .toLowerCase()
     .split('')
+    .map((letter) => typeof letterTransformations[letter] !== 'undefined' ?
+      letterTransformations[letter] : letter
+    )
     .filter(letter => typeof letterNumbers[letter] !== 'undefined')
     .reduce((sum, letter) => sum + letterNumbers[letter], 0);
 
