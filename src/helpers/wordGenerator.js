@@ -1,34 +1,8 @@
-const soft = ['a', 'e', 'i', 'o', 'u', 'y'];
-const hard = [
-  'b',
-  'c',
-  'd',
-  'f',
-  'g',
-  'h',
-  'j',
-  'k',
-  'l',
-  'm',
-  'n',
-  'p',
-  'q',
-  'r',
-  's',
-  't',
-  'w',
-  'x',
-  'z',
-  'sh',
-  'ch'
-];
-
-const randomNumberFromRange = (a, b) => a + Math.round(Math.random() * (b - a));
-const randomSoft = () => soft[randomNumberFromRange(0, soft.length - 1)];
-const randomHard = () => hard[randomNumberFromRange(0, hard.length - 1)];
+import { randomNumberFromRange } from './random';
+import { randomSoftLetter, randomHardLetter } from './randomLetters';
 
 const generate = () => {
-  const length = randomNumberFromRange(4, 6);
+  const length = randomNumberFromRange(4, 8);
 
   let word = '';
   let softCount = 0;
@@ -39,11 +13,11 @@ const generate = () => {
       softCount !== 2 &&
       (hardCount === 2 || Math.random() > 0.5)
     ) {
-      word += randomSoft();
+      word += randomSoftLetter();
       softCount++;
       hardCount = 0;
     } else {
-      word += randomHard();
+      word += randomHardLetter();
       softCount = 0;
       hardCount++;
     }
