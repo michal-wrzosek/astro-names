@@ -2,7 +2,7 @@ import { randomNumberFromRange } from './random';
 import { randomSoftLetter, randomHardLetter } from './randomLetters';
 
 const generate = () => {
-  const length = randomNumberFromRange(4, 8);
+  const length = randomNumberFromRange(4, 5);
 
   let word = '';
   let softCount = 0;
